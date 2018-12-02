@@ -13,7 +13,7 @@
 ; Note ..........: CUSTOM EDITS made to resize the taskbar wider, after moving.
 ;
 ; FOUND THIS SCRIPT Originally here: https://www.autoitscript.com/forum/topic/148470-windows-7-move-taskbar/
-; Now saved on Github:
+; Now saved on Github: https://github.com/andyacer/windows-taskbar-fix/
 ; ===============================================================================================================================
 
 #NoTrayIcon
