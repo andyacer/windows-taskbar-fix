@@ -28,7 +28,9 @@ Here's all that you need to do to use it:
 
 # I want to use it just like you did, how do I do that?
 
-You'll need to create a scheduled task to automate the whole thing.  And to create the scheduled task you'll need to enable some additional audit logs.  I set it up so that it fixes my taskbar every time I unlock my machine, which is Windows event ID 4801.  I could write some more code to automate the install and make the taskbar location selectable ... but I won't bother unless someone asks really nicely.
+You'll need to create a scheduled task to automate the whole thing.  And to create the scheduled task you'll need to enable some additional audit logs.  Enabling this level of logging might not be possible in some versions of Windows, I'm not sure about that.  I set it up so that it fixes my taskbar every time I unlock my machine, which is Windows event ID 4801.
+
+I could write some more code to automate the install and make the taskbar location selectable ... but I won't bother unless someone asks really nicely.
 
 1. Click the button in the upper right to download this repo.
 1. Install [AutoIT](https://www.autoitscript.com/site/autoit/downloads/).
