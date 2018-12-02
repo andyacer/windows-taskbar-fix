@@ -26,7 +26,7 @@ Here's all that you need to do to use it:
 1. Move the taskbar to the bottom of your screen.
 1. Run the script.  The taskbar should automatically move.
 
-:warning: **Usage Note** It seems to not work on the first attempt after a reboot or upon initial use.  Run the script 4-5 times until it seems to be working consistently.  I'm not sure about the cause of this.
+:warning: **Usage Note** Try running it a few times if it doesn't work at first.  Automating GUI actions in Windows is pretty difficult.  The script doesn't work under all situations.  But it does work for me when I want it to, which is when I unlock my computer.
 
 # I want to use it just like you did, how do I do that?
 
