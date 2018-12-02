@@ -26,6 +26,8 @@ Here's all that you need to do to use it:
 1. Move the taskbar to the bottom of your screen.
 1. Run the script.  The taskbar should automatically move.
 
+:warning: **Usage Note** It seems to not work on the first attempt after a reboot or upon initial use.  Run the script 4-5 times until it seems to be working consistently.  I'm not sure about the cause of this.
+
 # I want to use it just like you did, how do I do that?
 
 You'll need to create a scheduled task to automate the whole thing.  And to create the scheduled task you'll need to enable some additional audit logs.  Enabling this level of logging might not be possible in some versions of Windows, I'm not sure about that.  I set it up so that it fixes my taskbar every time I unlock my machine, which is Windows event ID 4801.
