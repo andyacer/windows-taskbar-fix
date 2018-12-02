@@ -23,6 +23,8 @@ Func _MoveTaskBar($ScreenPosX, $ScreenPosY='')
     Local $LockState = RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "TaskbarSizeMove") ;Get Lock State
     Local $TaskBarPos = WinGetPos('[Class:Shell_TrayWnd]') ;Get Current TaskBar State
 
+    Opt('SendKeyDelay', 25); default 5. higher number = slower
+
     If Not $LockState Then DllCall("user32.dll", "lresult", "SendMessageW", "hwnd", WinGetHandle("[CLASS:Shell_TrayWnd]"), "uint", 273, "wparam", 424, "lparam", 0) ;Unlock Taskbar
     ControlSend('[Class:Shell_TrayWnd]', '', '', '!{Space}' & '{m}' & '{Up}') ;Prepare TaskBar For Movement
 
@@ -43,6 +45,9 @@ Func _MoveTaskBar($ScreenPosX, $ScreenPosY='')
 	;REMOVE THIS SECTION IF RESIZING THE WIDTH OF THE TASKBAR ISN'T YOUR THING ----------------------------------
     Sleep(500)
 	ControlSend('[Class:Shell_TrayWnd]', '', '', '!{Space}' & '{s}' & '{Left}') ;Prepare TaskBar For Resizing
+
+
+
 	ControlSend('[Class:Shell_TrayWnd]', '', '', _StringRepeat('{Left}', 8))    ;Send left arrow a few times, to make it wider
     ControlSend('[Class:Shell_TrayWnd]', '', '', '{Enter}') 					;Complete resizing
     ;------------------------------------------------------------------------------------------------------------
@@ -63,16 +68,18 @@ Func _MoveTaskBar($ScreenPosX, $ScreenPosY='')
 
 ; CUSTOM STUFF HERE.. TO ACTUALLY USE THE AWESOME FUNCTION
 
+
 Local $TaskBarPos = WinGetPos('[Class:Shell_TrayWnd]') ;Get New TaskBar State
 
 ;Check if Taskbar is already where I want it, on the right side of the left screen
 If Not ($TaskBarPos[0] < 0 And $TaskBarPos[1] = 0) Then
+   BlockInput(1)
 
-   Sleep(400)
+   Sleep(600)
    _MoveTaskBar(-40, @DesktopHeight/2)
 
 EndIf
 
-
+BlockInput(0)
 
 
