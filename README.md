@@ -51,7 +51,7 @@ I could write some more code to automate the install and make the taskbar locati
       Audit Other Login/Logoff Events
 1. \[Optional] Lock and unlock your machine and confirm that you can find the corresponding events in Event Viewer.  Path in Event Viewer is -> Windows Logs -> Security (Audit Success, Event ID 4801, Other Logon/Logoff Events).
 1. Open Task Scheduler and create a task that triggers on event ID 4801.
-   1. Open Event Viewer.
+   1. Open Task Scheduler.
    1. On the Right, select "Create Basic Task."  Fill in until you get to Trigger section.
    1. For Trigger, select "When a specific event is logged."
    1. For "Log" select "Security."  For "Source" select "Microsoft Windows security auditing."  For Event ID, use "4801".  Click Next.
